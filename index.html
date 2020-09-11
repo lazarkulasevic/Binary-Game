@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <i class="fa fa-info-circle fa-3x"></i>
+            <h1>Guess the number!</h1>
+            <p>
+                Computer has generated a random number between 1 and 100. Your mission is to click on that number in 7 attempts or less. Good luck!
+            </p>
+        </header>
+        <section>
+            <div class="table-wrapper">
+                <table id="table"></table>
+            </div>
+
+            <table class="results"></table>
+        </section>
+        <footer class="percent">
+            Your accuracy: <span></span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
