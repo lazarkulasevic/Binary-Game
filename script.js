@@ -50,8 +50,6 @@ tableTable.addEventListener('click', event => {
     }
 });
 
-console.log('trazeni', mainNumber);
-
 for (let i = 1; i <= 8; i++) {
     let trElement = document.createElement('tr');
     trElement.classList.add('tr-results')
@@ -141,7 +139,6 @@ function binarySearch() {
         }
         target = Math.round((top + bot) / 2);
     }
-    console.log('poslednji broj je', target);
     fields.push(target);
 
     return fields;
