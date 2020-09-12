@@ -5,6 +5,8 @@ Built from scratch using only:
 - CSS3 
 - Vanilla Javascript
 
+## [PLAY NOW :video_game:](https://lazarkulasevic.github.io/binary-game)
+
 ## The purpose of the game
 
 This simple game serves as an interactive simulation of a binary search.
