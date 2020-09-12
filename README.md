@@ -5,7 +5,7 @@ Built from scratch using only:
 - CSS3 
 - Vanilla Javascript
 
-## Purpose of the game
+## The purpose of the game
 
 This simple game serves as an interactive simulation of a binary search.
 
