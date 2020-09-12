@@ -37,10 +37,10 @@ tableTable.addEventListener('click', event => {
 
         if (event.target.textContent == mainNumber) {
             playersAccuracy();
-            tableResultsPrint(counter);
+            tableResultsPrint(counter, event.target.textContent);
             congrats();
         } else {
-            tableResultsPrint(counter);
+            tableResultsPrint(counter, event.target.textContent);
             counter++;
             if (counter > 7) {
                 playersAccuracy();
@@ -51,8 +51,6 @@ tableTable.addEventListener('click', event => {
 });
 
 console.log('trazeni', mainNumber);
-
-
 
 for (let i = 1; i <= 8; i++) {
     let trElement = document.createElement('tr');
@@ -77,7 +75,7 @@ tdElementAllRes[0].appendChild(tdText1);
 tdElementAllRes[1].appendChild(tdText2);
 tdElementAllRes[2].appendChild(tdText3);
 
-function tableResultsPrint(counter) {
+function tableResultsPrint(counter, input) {
     let trElementAllRes = document.querySelectorAll('.tr-results');
 
     for (let i = 1; i <= 3; i++) {
@@ -85,14 +83,13 @@ function tableResultsPrint(counter) {
         tdElement.classList.add(`num${counter}`)
         trElementAllRes[counter].appendChild(tdElement);
     }
-
     let classCounter = 'num' + counter;
     let tdElementAllRes = document.querySelectorAll(`.${classCounter}`)
-    let greater = 'Greater than', less = 'Less than';
-    let greaterLess = event.target.textContent > mainNumber ? less : greater;
+    let greater = 'greater than', less = 'less than', numWanted = "correct! It's";
+    let greaterLess = input == mainNumber ? numWanted : input > mainNumber ? less : greater;
 
     let numOfTry = document.createTextNode(`${counter}`);
-    let greaterOrLess = document.createTextNode(`${greaterLess} ${event.target.textContent}`);
+    let greaterOrLess = document.createTextNode(`${greaterLess} ${input}`);
     let triesLeft = document.createTextNode(`${7 - counter}`);
 
     tdElementAllRes[0].appendChild(numOfTry);
@@ -152,26 +149,23 @@ function binarySearch() {
 
 function demo() {
     let i = 0;
+    fields = binarySearch();
+
     let coloring = setInterval(() => {
         let num = fields[i];
+        tableResultsPrint(counter, num);
         i += 1;
-
-        console.log(num);
+        counter += 1;
 
         tdElementAll[num - 1].classList.add('clicked');
         if (i == fields.length) {
             tdElementAll[num-1].classList.add('wanted');
             clearInterval(coloring);
         }
-
-        tableResultsPrint(i);
-
     }, 800);
 }
 
-faBtn.addEventListener('click', event => {
-    fields = binarySearch();
+faBtn.addEventListener('click', () => {
     demo();
-    
 
 }, {once: true});

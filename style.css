@@ -1,7 +1,7 @@
 * {
     margin: 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -45,8 +45,17 @@ footer {
 .container {
     border-radius: 20px;
     box-shadow: 6px 6px 30px -10px #07343a;
-    overflow: hidden;
     margin: auto 20px;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 6px 6px 30px -10px #07343a;
 }
 
 #table {
@@ -101,13 +110,22 @@ footer {
 
 .fa {
     float: right;
-    color: #b9f15ef3;
+    color: #70e4b3f3;
     text-shadow: 1px 1px 5px #052e4960;
     cursor: pointer;
 }
 
 .fa:hover {
     color: #5ef15ef3;
+}
+
+.developer {
+    color:#b8fcf6;
+    text-align: center;
+}
+
+.developer a {
+    color:#b8fcf6;
 }
 
 @media only screen and (max-width: 839px) {
@@ -118,5 +136,9 @@ footer {
     }
     .results {
         padding: 10px;
+    }
+    .developer {
+        width: 100%;
+        padding: 20px;
     }
 }
