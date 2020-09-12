@@ -1,11 +1,11 @@
-# Binary Game
+# Guess the number
 
 Built from scratch using only:
 - HTML5
 - CSS3 
 - Vanilla Javascript
 
-## [PLAY NOW :video_game:](https://lazarkulasevic.github.io/binary-game)
+## [PLAY NOW :video_game:](https://lazarkulasevic.github.io/binary-search)
 
 The game uses player's **local storage** to save *overall accuracy* which is calculated as the number of won games divided by the total number of plays. The result is printed in the footer area.
 
